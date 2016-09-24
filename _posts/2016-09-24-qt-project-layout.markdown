@@ -9,6 +9,7 @@ In order to create an Qt project with tests, I stumbled upon a very helpful tuto
 However, I was not fully satisfied. For one, the library was missing the `__declspec` attribute so the DLL would not work. Besides, I couldn't find a way to automate my builds (so you could use build servers or add some simple CI).
 
 In this write-up, I will cover the following things:
+
 - Splitting a Qt project into 3 sub-projects (A library, tests and a GUI)
 - Using QtTest for TDD
 - Automating builds with PS

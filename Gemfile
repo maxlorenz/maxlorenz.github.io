@@ -5,6 +5,5 @@ gem "jekyll-theme-minimal", "0.1.1"
 gem "pygments.rb"
 
 group :jekyll_plugins do
-    gem "github-pages", '>= 206'
     gem 'jekyll-org', '>= 1.1.0'
 end

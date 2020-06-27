@@ -1,0 +1,5 @@
+#+title: Doom Emacs under WSL 2
+#+layout: post
+#+tags: emacs windows wsl
+
+This is a blog post

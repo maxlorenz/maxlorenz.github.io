@@ -1,12 +1,12 @@
 ---
-title:  "Emacs Remote Rails Console"
-date:   2020-07-12
-categories: emacs elisp rails ssh
+title: "Emacs Remote Rails Console"
+date:  2020-07-12
+tags:  emacs elisp rails ssh
 ---
 
 As a rails dev, it's very helpful to connect to a remote instance within your
-~os~ editor (which is Emacs, of course!). Let's add a nice binding to our[Doom
-Emacs](https://github.com/hlissner/doom-emacs) config.
+~~os~~ editor (which is Emacs, of course!). Let's add a nice binding to our
+[Doom Emacs](https://github.com/hlissner/doom-emacs) config.
 
 ## Connecting to a rails instance running in docker
 
@@ -31,7 +31,7 @@ private files. A new layer would be too much overhead ;)
   rails/app '("app-1" "app-2")
   rails/server '("my.server.com" "my.other-server.com"))
 
-(defn rails/remote-console ()
+(defun rails/remote-console ()
   "Start a remote console"
   (let ((app (ivy-read "App: " rails/apps))
         (server (ivy-read "Server: " rails/servers)))

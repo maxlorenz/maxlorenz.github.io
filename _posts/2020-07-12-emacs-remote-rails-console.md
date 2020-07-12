@@ -33,6 +33,7 @@ private files. A new layer would be too much overhead ;)
 
 (defun rails/remote-console ()
   "Start a remote console"
+  (interactive)
   (let ((app (ivy-read "App: " rails/apps))
         (server (ivy-read "Server: " rails/servers)))
     (compile

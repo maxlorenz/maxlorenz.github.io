@@ -38,10 +38,13 @@ private files. A new layer would be too much overhead ;)
         (server (ivy-read "Server: " rails/servers)))
     (compile
        (format "ssh -tt %s.com 'docker exec -it %s %s'"
-               server app "rails c") t)))
+               server app "rails c") t)
+    (rename-buffer (format "*rails %s@%s*" app server))))
 ```
 
-It'd be pretty easy to change `ivy-read` for `helm`, for example
+It'd be pretty easy to change `ivy-read` for `helm`, for example. I also rename
+the buffer so I can connect to different servers without closing the existing
+connections.
 
 ## Keybindings & Adding to the config
 

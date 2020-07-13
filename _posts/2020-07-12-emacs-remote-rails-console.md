@@ -34,17 +34,16 @@ private files. A new layer would be too much overhead ;)
 (defun rails/remote-console ()
   "Start a remote console"
   (interactive)
-  (let ((app (ivy-read "App: " rails/apps))
-        (server (ivy-read "Server: " rails/servers)))
+  (let ((app (completing-read "App: " rails/apps))
+        (server (completing-read "Server: " rails/servers)))
     (compile
        (format "ssh -tt %s.com 'docker exec -it %s %s'"
                server app "rails c") t)
     (rename-buffer (format "*rails %s@%s*" app server))))
 ```
 
-It'd be pretty easy to change `ivy-read` for `helm`, for example. I also rename
-the buffer so I can connect to different servers without closing the existing
-connections.
+I also rename the buffer so I can connect to different servers with
+`rename-buffer` without closing the existing connections.
 
 ## Keybindings & Adding to the config
 
